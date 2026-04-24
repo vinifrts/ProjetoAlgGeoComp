@@ -1,6 +1,6 @@
 public class LinearAlgebra {
 
-    // matriz transposta (vinicius)
+    // matriz transposta 
     public static Matrix transpose(Matrix a) {
         Matrix result = new Matrix(a.cols, a.rows, new double[a.cols * a.rows]);
         for (int i = 0; i < a.rows; i++) {
@@ -11,7 +11,7 @@ public class LinearAlgebra {
         return result;
     }
 
-    //  sum (kaue)
+    //  sum 
     public static Matrix sum(Matrix a, Matrix b) {
         if (a.rows != b.rows || a.cols != b.cols) {
             throw new IllegalArgumentException("As matrizes devem ter o mesmo tamanho.");
@@ -25,7 +25,7 @@ public class LinearAlgebra {
         return result;
     }
 
-    //  times (kaue)
+    //  times 
     public static Matrix times(Matrix a, Object b) {
         Matrix result = new Matrix(a.rows, a.cols, new double[a.rows * a.cols]);
 
@@ -57,7 +57,7 @@ public class LinearAlgebra {
     }
 
 
-    //  dot (vinicius)
+    //  dot 
     public static Matrix dot(Matrix a, Matrix b) {
         if (a.cols != b.rows) {
             throw new IllegalArgumentException("Número de colunas de A deve ser igual ao número de linhas de B.");
@@ -75,7 +75,7 @@ public class LinearAlgebra {
         return result;
     }
 
-    //  gauss (naoki)
+    //  gauss
     public static Matrix gauss(Matrix a) {
         int n = a.rows;
         Matrix result = new Matrix(n, a.cols, new double[n * a.cols]);
@@ -111,7 +111,7 @@ public class LinearAlgebra {
         return result;
     }
 
-    //  solve (roger)
+    //  solve 
     public static Matrix solve(Matrix a) {
         int n = a.rows;
         Matrix result = gauss(a);
